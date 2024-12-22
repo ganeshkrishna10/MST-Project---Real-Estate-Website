@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 20px;
+        }
+        li {
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User List</h2>
+    <ul id="userList">
+        <!-- User data will be inserted here using JavaScript -->
+    </ul>
+    <script>
+    async function fetchData() {
+        try {
+            const response = await fetch('/get-users');
+            const data = await response.json();
+            const userList = document.getElementById('userList');
+
+            data.forEach(user => {
+                const li = document.createElement('li');
+                const li1 = document.createElement('li1');
+                li.textContent = user.email;
+                userList.appendChild(li);
+                 li1.textContent = user.phone;
+                userList.appendChild(li1);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    fetchData();
+</script>
+
+</body>
+</html>

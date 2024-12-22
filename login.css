@@ -1,0 +1,144 @@
+body{
+   
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #3366ff , #cc66ff);
+    height: 100%;
+    overflow: hidden;
+   
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    animation-name: bunny;  
+    transition: 0.5 ; 
+}
+
+@keyframes bunny{
+     container{
+        border-color: #d87d7d ;
+     }
+}
+
+.container h1{
+    text-align: center;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+}
+
+.container form{
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+
+form .txt{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0px;
+
+}
+
+.txt input{
+    padding: 0 5px;
+    width:100%;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+   
+}
+.txt label {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    color: #adadad;
+    font-size: 16px;
+    transform: translatex(-11px);
+    transition: .5s;
+}
+.txt input:focus~ label,
+.txt input:valid~ label{
+    top: -18px;
+    color: #00ffff;
+}
+.txt span::before {
+    position: absolute;
+    content: '';
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00ffff;
+   
+}
+.txt input:focus ~ span::before,
+.txt input:valid~ span::before{
+    background: black;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    cursor: pointer;
+    color: #adadad;
+}
+ 
+.pass:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width:100%;
+    height: 40px;
+    border-radius: 30px;
+    background: #00ffff;
+}
+
+input[type="submit"]:hover{
+    background:black ;
+    color:#00ffff;
+    cursor: pointer;
+}
+
+.sign_in{
+    margin: 15px 0 15px 0;
+    text-align: center;
+    color: #adadad;
+}
+
+.sign_in a{
+    text-decoration: none;
+}
+
+.sign_in a:hover{
+    text-decoration: underline;
+   
+}  
+
+.container1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+   
+}
+
+
+
+
+
+
+
+
+
+
